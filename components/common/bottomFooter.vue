@@ -37,12 +37,16 @@
                 <img src="../../assets/images/common/icon-qq.png" alt="">
               </a> -->
             <!-- </div> -->
+            <img :src="wxQRCode" style="width: 65%; height: 270px; margin-bottom: 20px;" alt="微信联系方式"></img>
           </li>
         </ul>
       </div>
     </div>
     <div class="copyright">
-      Copyright © WYD International Technology Company
+      <img :src="wxQRCode" style="width: 150px; height: 150px; margin-bottom: 20px;" alt="微信联系方式"></img>
+      <div>
+        Copyright © WYD International Technology Company
+      </div>
       <!-- <a class="icp-link" href="https://beian.miit.gov.cn">京ICP备05021348号</a> -->
     </div>
   </div>
@@ -63,6 +67,7 @@ export default {
   },
   data () {
     return {
+      wxQRCode: require('@/assets/images/company/wxqrcode.jpeg'),
       isMacOS: undefined,
       phoneUrl: '',
       /* 电脑端导航栏 */

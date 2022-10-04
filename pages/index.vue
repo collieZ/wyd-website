@@ -115,13 +115,12 @@
               <dl>
                 <dt>微信二维码</dt>
                 <div class="wx-pic">
-                  <img :src="wxQRCode" style="width: 65%; height: 270px; margin-bottom: 20px;" alt="微信联系方式">
                   <img :src="wxQRCode2" style="width: 65%; height: 270px" alt="微信联系方式员工">
                 </div>
               </dl>
               <dl>
-                <!-- <dt>{{ $t("about.contactUs.phone.title") }}</dt> -->
-                <!-- <dd>{{ $t("about.contactUs.phone.info") }}</dd> -->
+                <dt> 邮箱 </dt>
+                <dd>Wydinternationaltechnology.com@gmail.com</dd>
               </dl>
               <dl>
                 <!-- <dt>{{ $t("about.contactUs.fax.title") }}</dt> -->
@@ -222,6 +221,11 @@ export default {
           title: '国内对接服务',
           desc: '本公司可以对接国内所有企业工厂！有效达成互利共赢的商业合作模式！',
           url: require('@/assets/images/company/hezuo.png')
+        },
+        {
+          title: '巴基斯坦陆运双清关服务',
+          desc: '专业从事中国到巴基斯坦任何城市提供门到门的陆运双清关服务',
+          url: require('@/assets/images/company/luyun.png')
         }
       ],
       carouselList: [

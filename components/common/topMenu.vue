@@ -14,7 +14,7 @@
         <div slot="left" class="left">
           <div class="logo">
             <img
-              src="../../assets/images/company/logo.jpeg"
+              src="../../assets/images/company/logo3.png"
               style="width: 80px; height: 45px; object-fit: cover;"
               width="100%"
               height="100%"
@@ -78,7 +78,7 @@
         <div class="nav-left">
           <img
             style="width: 130px; height: 70px; object-fit: cover;"
-            src="../../assets/images/company/logo.jpeg"
+            src="../../assets/images/company/logo3.png"
             class="menuLogo"
             alt="公司logo"
             title="logo"

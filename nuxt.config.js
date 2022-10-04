@@ -23,7 +23,7 @@ module.exports = {
       { name: 'force-renderer', content: 'webkit' },
       {
         name: 'keywords',
-        content: 'WYD,巴基斯坦签证服务,巴基斯坦市场考察服务,商务考察接待服务'
+        content: 'WYD International Technology Company,巴基斯坦,巴基斯坦签证服务,巴基斯坦市场考察服务,商务考察接待服务,陆运双清关服务,wyd,WYD'
       },
       { name: 'format-detection', content: 'telephone=yes' },
       {
@@ -136,9 +136,9 @@ module.exports = {
   ],
   sitemap: {
     hostname: 'https://wyd-website-offical.vercel.app',
-    cacheTime: 1000 * 60 * 60 * 12, // 1天 更新频率，只在 generate: false有用
+    cacheTime: 1000 * 60 * 60 * 12, // 1天 更新频率,只在 generate: false有用
     gzip: true, // 生成 .xml.gz 压缩的 sitemap
-    generate: false, // 允许使用 nuxt generate 生成
+    generate: true, // 允许使用 nuxt generate 生成
     exclude: [
       '/404',
       '/aboutUs/history'
@@ -222,7 +222,7 @@ module.exports = {
       // changeOrigin: true,
       pathRewrite: {
         '^/baseApi': '/'
-      } // 重定向请求路径，防止路由、api路径的冲突
+      } // 重定向请求路径,防止路由、api路径的冲突
     },
     '/enApi': {
       target: 'http://192.168.11.132:8081/', // 英文后台api请求路径
@@ -230,7 +230,7 @@ module.exports = {
       // changeOrigin: true,
       pathRewrite: {
         '^/enApi': '/'
-      } // 重定向请求路径，防止路由、api路径的冲突
+      } // 重定向请求路径,防止路由、api路径的冲突
     }
   },
   cssModules: {
@@ -256,7 +256,7 @@ module.exports = {
           {
             libraryName: 'ant-design-vue',
             libraryDirectory: 'es',
-            style: 'css' // 如果需要使用 less 方式去按需加载的话，则需要改为 true ，并且添加下面loaders 配置
+            style: 'css' // 如果需要使用 less 方式去按需加载的话,则需要改为 true ,并且添加下面loaders 配置
           },
           'ant-design-vue'
         ],
