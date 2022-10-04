@@ -289,7 +289,7 @@ module.exports = {
         }
       }
     },
-    publicPath: '/',
+    publicPath: '',
     vendor: ['vue-apexchart', 'vue-i18n'],
     // css文件外部引入
     extractCSS: true,

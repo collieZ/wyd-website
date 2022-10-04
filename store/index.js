@@ -33,84 +33,84 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_LANG(state, locale) {
+  SET_LANG (state, locale) {
     if (state.locales.includes(locale)) {
       state.locale = locale
     }
   },
-  SET_BASEURL(state, url) {
+  SET_BASEURL (state, url) {
     if (!url) {
       state.baseUrl = 'baseApi'
       return
     }
     state.baseUrl = url
   },
-  changeIsPhone(state, isPhone) {
+  changeIsPhone (state, isPhone) {
     state.isPhone = isPhone
   },
-  changeBrowser(state, browser) {
+  changeBrowser (state, browser) {
     state.browser = browser
   },
-  changePruductList(state, arr) {
+  changePruductList (state, arr) {
     state.pruductList = arr
   },
-  changeSolutionList(state, arr) {
+  changeSolutionList (state, arr) {
     state.solutionList = arr
   },
-  setBaseConfig(state, baseConfig) {
+  setBaseConfig (state, baseConfig) {
     state.baseConfig = baseConfig
   },
   // 设置当前选中菜单 index
-  changeMenuIndex(state, menuIndex) {
+  changeMenuIndex (state, menuIndex) {
     state.menuIndex = menuIndex
   },
-  changeTabbarShow(state, show) {
+  changeTabbarShow (state, show) {
     state.tabbarShow = show
   },
-  changTopbarShow(state, show) {
+  changTopbarShow (state, show) {
     state.topbarShow = show
   },
-  setPaintingInfo(state, paintingInfo) {
+  setPaintingInfo (state, paintingInfo) {
     state.paintingInfo = paintingInfo
   },
-  setArticleCategory(state, category) {
+  setArticleCategory (state, category) {
     state.articleCategory = category
   },
-  changeUser(state, user) {
+  changeUser (state, user) {
     state.user = user
   },
-  changeIsLogin(state, isLogin) {
+  changeIsLogin (state, isLogin) {
     state.isLogin = isLogin
   },
-  changeLoginDialogShow(state, show) {
+  changeLoginDialogShow (state, show) {
     state.loginDialogShow = show
   },
-  changeLoginDialogType(state, type) {
+  changeLoginDialogType (state, type) {
     state.loginDialogType = type
   }
 }
 
 export const actions = {
-  async nuxtServerInit({ commit, state }, { req, res, app }) {
-    let baseConfig = await app.$axios({
+  async nuxtServerInit ({ commit, state }, { req, res, app }) {
+    const baseConfig = await app.$axios({
       method: 'get',
       url: '/config.json'
     })
     // 初次加载同步浏览器端和服务端数据
     app.i18n.locale = state.locale
-    let cookiesJson = utils.parseCookie(req.headers.cookie)
-    let lang = cookiesJson.lang || 'zh'
+    const cookiesJson = utils.parseCookie(req.headers.cookie)
+    const lang = cookiesJson.lang || 'zh'
     // let lang = req.ctx && req.ctx.cookies.get('lang') || 'zh'
     app.i18n.locale = lang
     // 根据当前语言切换图片服务器地址，存入store中
-    if (lang === 'zh') {
-      baseConfig.data.ApiUrl.baseApi = baseConfig.data.ApiUrl.baseApiZh
-    } else {
-      baseConfig.data.ApiUrl.baseApi = baseConfig.data.ApiUrl.baseApiEn
-    }
-    app.baseConfig = baseConfig.data
-    commit('setBaseConfig', baseConfig.data)
-    commit('SET_LANG', lang)
-    commit('SET_BASEURL', URLS[lang])
+    // if (lang === 'zh') {
+    //   baseConfig.data.ApiUrl.baseApi = baseConfig.data.ApiUrl.baseApiZh
+    // } else {
+    //   baseConfig.data.ApiUrl.baseApi = baseConfig.data.ApiUrl.baseApiEn
+    // }
+    // app.baseConfig = baseConfig.data
+    // commit('setBaseConfig', baseConfig.data)
+    // commit('SET_LANG', lang)
+    // commit('SET_BASEURL', URLS[lang])
   }
 }
