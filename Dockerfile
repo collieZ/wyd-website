@@ -14,10 +14,8 @@ COPY . /nuxt
 WORKDIR /nuxt
 #8、暴露端口3000，默认端口
 EXPOSE 3000
-#9、清除缓存
-RUN npm cache clean --force
 #10、安装依赖
-RUN npm i yarn -g
+RUN npm i yarn -g --force
 RUN yarn install
 #11、构建，生成dist文件
 RUN yarn run build
