@@ -162,50 +162,50 @@ module.exports = {
       {
         path: '/sitemap-home.xml',
         routes: [
-          '/',
-          '/aboutUs',
-          '/solution',
-          '/product',
-          '/apply'
-        ],
-        gzip: true,
-        exclude: ['/aboutUs/history']
-      },
-      {
-        path: '/sitemap-sdetail.xml',
-        routes: [
-          '/sdetail/306',
-          '/sdetail/298',
-          '/sdetail/252',
-          '/sdetail/285',
-          '/sdetail/240',
-          '/sdetail/248',
-          '/sdetail/314',
-          '/sdetail/265',
-          '/sdetail/162',
-          '/sdetail/177'
-        ],
-        gzip: true,
-        exclude: ['/aboutUs/history']
-      },
-      {
-        path: '/sitemap-pdetail.xml',
-        routes: [
-          '/pdetail/264',
-          '/pdetail/234',
-          '/pdetail/228',
-          '/pdetail/215',
-          '/pdetail/198',
-          '/pdetail/192',
-          '/pdetail/186',
-          '/pdetail/154',
-          '/pdetail/171',
-          '/pdetail/205',
-          '/pdetail/315'
+          '/'
+          // '/aboutUs',
+          // '/solution',
+          // '/product',
+          // '/apply'
         ],
         gzip: true,
         exclude: ['/aboutUs/history']
       }
+      // {
+      //   path: '/sitemap-sdetail.xml',
+      //   routes: [
+      //     '/sdetail/306',
+      //     '/sdetail/298',
+      //     '/sdetail/252',
+      //     '/sdetail/285',
+      //     '/sdetail/240',
+      //     '/sdetail/248',
+      //     '/sdetail/314',
+      //     '/sdetail/265',
+      //     '/sdetail/162',
+      //     '/sdetail/177'
+      //   ],
+      //   gzip: true,
+      //   exclude: ['/aboutUs/history']
+      // },
+      // {
+      //   path: '/sitemap-pdetail.xml',
+      //   routes: [
+      //     '/pdetail/264',
+      //     '/pdetail/234',
+      //     '/pdetail/228',
+      //     '/pdetail/215',
+      //     '/pdetail/198',
+      //     '/pdetail/192',
+      //     '/pdetail/186',
+      //     '/pdetail/154',
+      //     '/pdetail/171',
+      //     '/pdetail/205',
+      //     '/pdetail/315'
+      //   ],
+      //   gzip: true,
+      //   exclude: ['/aboutUs/history']
+      // }
     ]
   },
   /*
