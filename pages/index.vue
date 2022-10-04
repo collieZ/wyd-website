@@ -115,7 +115,7 @@
               <dl>
                 <dt>微信二维码</dt>
                 <div class="wx-pic">
-                  <img :src="wxQRCode2" style="width: 65%; height: 270px" alt="微信联系方式员工">
+                  <img :src="wxQRCode2" style="width: 60%; height: 280px" alt="微信联系方式员工">
                 </div>
               </dl>
               <dl>
