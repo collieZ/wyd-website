@@ -238,6 +238,7 @@ module.exports = {
     localIdentName: '[local]_[hash:base64:8]'
   },
   router: {
+    base: '/wyd/',
     // customize nuxt.js router (vue-router).
     middleware: 'me' // middleware all pages of the application
   },
