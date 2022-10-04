@@ -128,3 +128,4 @@ package.json
 2.开发环境Jenkins 里面的配置
 sshCommand remote: remoteServer, command:'sed -i "s/192.168.3.9/192.168.11.132/g" /home/guanwang/package.json'
 3.导航需要合并 栏目管理里面 自定义链接 加上 stack:分类# wyd-website
+# wyd-website
