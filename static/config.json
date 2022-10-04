@@ -1,0 +1,12 @@
+{
+    "base": {
+        "webName": "",
+        "license": false,
+        "authorization": ""
+    },
+    "ApiUrl": {
+        "baseApi": "http://192.168.11.132:8081",
+        "baseApiZh": "http://192.168.11.132:8081",
+        "baseApiEn": "http://192.168.11.132:8081"
+    }
+}
