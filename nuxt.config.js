@@ -244,6 +244,10 @@ module.exports = {
   /*
    ** Build configuration
    */
+  server: {
+    host: '0.0.0.0', // default: localhost,
+    port: 3000
+  },
   build: {
     /*
      ** You can extend webpack config here

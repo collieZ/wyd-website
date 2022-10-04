@@ -13,11 +13,12 @@ COPY . /nuxt
 #7、切换工作目录到/hello
 WORKDIR /nuxt
 #8、暴露端口3000，默认端口
-EXPOSE 3000
+RUN chmod -R 777 *
 #10、安装依赖
 RUN npm i yarn -g --force
 RUN yarn install
 #11、构建，生成dist文件
 RUN yarn run build
+EXPOSE 3000
 #12、start
 CMD ["yarn","start"]
