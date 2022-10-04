@@ -135,7 +135,7 @@ module.exports = {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://wyd-website-offical.vercel.app',
+    hostname: 'http://elpsycongroo7.cn:3000/',
     cacheTime: 1000 * 60 * 60 * 12, // 1天 更新频率,只在 generate: false有用
     gzip: true, // 生成 .xml.gz 压缩的 sitemap
     generate: false, // 允许使用 nuxt generate 生成
