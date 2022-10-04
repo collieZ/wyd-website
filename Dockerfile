@@ -17,8 +17,9 @@ EXPOSE 3000
 #9、清除缓存
 RUN npm cache clean --force
 #10、安装依赖
-RUN npm install --registry=https://registry.npmmirror.com
+RUN npm i yarn -g --registry=https://registry.npmmirror.com
+RUN yarn install
 #11、构建，生成dist文件
-RUN npm run build
+RUN yarn run build
 #12、start
-CMD ["npm","start"]
+CMD ["yarn","start"]
