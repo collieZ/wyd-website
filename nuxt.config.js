@@ -25,6 +25,10 @@ module.exports = {
         name: 'keywords',
         content: 'WYD International Technology Company,巴基斯坦,巴基斯坦签证服务,巴基斯坦市场考察服务,商务考察接待服务,陆运双清关服务,wyd,WYD'
       },
+      {
+        name: 'baidu-site-verification',
+        content: 'code-DoHIyOZTkj'
+      },
       { name: 'format-detection', content: 'telephone=yes' },
       {
         name: 'viewport',
@@ -135,7 +139,7 @@ module.exports = {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'http://elpsycongroo7.cn/wyd/',
+    hostname: 'http://www.elpsycongroo7.cn',
     cacheTime: 1000 * 60 * 60 * 12, // 1天 更新频率,只在 generate: false有用
     gzip: true, // 生成 .xml.gz 压缩的 sitemap
     generate: false, // 允许使用 nuxt generate 生成
@@ -238,7 +242,7 @@ module.exports = {
     localIdentName: '[local]_[hash:base64:8]'
   },
   router: {
-    base: '/wyd/',
+    base: '/',
     // customize nuxt.js router (vue-router).
     middleware: 'me' // middleware all pages of the application
   },
