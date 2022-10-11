@@ -5,7 +5,31 @@ module.exports = {
   /*
    ** Headers of the page
    */
+  hooks: {
+    'render:route': (url, result) => {
+      result.html = result.html.replace(/data-n-head=\"ssr\"/gi, '')
+    },
+    generate: {
+      page (page) {
+        const cheerio = require('cheerio')
+        const $ = cheerio.load(page.html, { decodeEntities: false })
 
+        const attrs = [
+          'data-n-head-ssr',
+          'data-n-head',
+          'data-hid',
+          'data-vue-ssr-id',
+          'data-server-rendered'
+        ]
+
+        attrs.forEach((value) => {
+          $('*[' + value + ']').removeAttr(value)
+        })
+
+        page.html = $.html()
+      }
+    }
+  },
   head: {
     script: [
       {
@@ -48,28 +72,6 @@ module.exports = {
         href: '/favicon.ico'
       }
     ]
-  },
-  hooks: {
-    generate: {
-      page (page) {
-        const cheerio = require('cheerio')
-        const $ = cheerio.load(page.html, { decodeEntities: false })
-
-        const attrs = [
-          'data-n-head-ssr',
-          'data-n-head',
-          'data-hid',
-          'data-vue-ssr-id',
-          'data-server-rendered'
-        ]
-
-        attrs.forEach((value) => {
-          $('*[' + value + ']').removeAttr(value)
-        })
-
-        page.html = $.html()
-      }
-    }
   },
   /*
    ** Customize the progress-bar color
